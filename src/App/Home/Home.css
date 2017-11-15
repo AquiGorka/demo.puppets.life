@@ -1,0 +1,23 @@
+.home{
+  padding: 1% 10%;
+}
+.home__quote{
+  margin: 2% 0;
+  text-align: right;
+  font-style: italic;
+  font-size: 17px;
+}
+.home__blockquote{
+  margin: 0;
+  padding: 0;
+}
+.home__main{
+  padding: 1% 0;
+  font-size: 18px;
+  text-align: justify;
+}
+.home__signature{
+  font-weight: bold;
+  text-align: right;
+  font-size: 18px;
+}
