@@ -1,0 +1,13 @@
+.simulation{
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  background-image: url('./stage.png');
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position: 50% 85%;
+}
+
+.simulation canvas{
+  height: 100%;
+}

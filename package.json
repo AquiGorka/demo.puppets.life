@@ -10,12 +10,15 @@
   "dependencies": {
     "google-url": "^0.0.4",
     "method-throttle": "^1.1.0",
+    "oimo": "^1.0.9",
     "qmark": "^0.0.1",
     "qr-encode": "^0.3.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
-    "simple-peer": "^8.1.1"
+    "simple-peer": "^8.1.1",
+    "three": "^0.88.0",
+    "three-trackballcontrols": "^0.0.6"
   },
   "devDependencies": {
     "nwb": "^0.19.2"
