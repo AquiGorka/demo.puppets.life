@@ -6,27 +6,28 @@ import nsa from '../../nsa'
 const googleUrl = new GoogleURL({ key: GOOGLE_APIKEY })
 const PUPPETEER = 'p2p connected, start sending gyro data'
 const CONNECT = 'waiting for connection'
-const ERROR = 'something went wrong'
-const NOID = 'no signal data was found'
 
 const Controls = () => <div>C</div>
 
 class Puppeteer extends Component {
-
-  state: { mode: null }
+  constructor(props) {
+    super(props)
+    this.state = { mode: null, id: null }
+  }
 
   async componentDidMount() {
     const signal = atob(qmark('signal'))
     if (signal) {
       const data = await nsa.signal(signal)
       googleUrl.shorten(`${location.origin}${location.pathname}?signal=${btoa(JSON.stringify(data))}`, (err, shortUrl) => {
+        if (err) {
+          console.log(err)
+        }
         // remove the length of https://goo.gl/
         const id = shortUrl.substr(15)
         //console.log(id)
         this.setState({  mode: CONNECT, id  })
       })
-    } else {
-      this.setState({  mode: NOID, msg: '' })
     }
     nsa.on('connect', () => this.setState({ mode: PUPPETEER }))
   }
