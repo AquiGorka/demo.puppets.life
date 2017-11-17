@@ -3929,6 +3929,10 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
 
+method-throttle@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/method-throttle/-/method-throttle-1.1.0.tgz#3fe827ec3622a74d755d68cf4519bfae702746c9"
+
 methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"

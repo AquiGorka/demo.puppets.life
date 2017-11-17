@@ -9,7 +9,8 @@ class NSA extends EventEmitter {
 
    init = () => {
     this.peer.on('connect', () => this.emit('connect'))
-    this.peer.on('data', () => this.emit('data', JSON.parse(data)))
+    this.peer.on('data', data => this.emit('data', JSON.parse(data)))
+    this.peer.on('close', () => this.emit('close'))
   }
 
   initiator() {
@@ -34,6 +35,10 @@ class NSA extends EventEmitter {
       this.peer.on('signal', resolve)
       this.init()
     })
+  }
+
+  send(data) {
+    this.peer.send(JSON.stringify(data))
   }
 }
 

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "google-url": "^0.0.4",
+    "method-throttle": "^1.1.0",
     "qmark": "^0.0.1",
     "qr-encode": "^0.3.0",
     "react": "^16.1.1",

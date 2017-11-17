@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import GoogleURL from 'google-url'
 import qmark from 'qmark'
+import Gyroscope from './Gyroscope'
 import nsa from '../../nsa'
 
 const googleUrl = new GoogleURL({ key: GOOGLE_APIKEY })
 const PUPPETEER = 'p2p connected, start sending gyro data'
 const CONNECT = 'waiting for connection'
 
-const Controls = () => <div>C</div>
 
 class Puppeteer extends Component {
   constructor(props) {
@@ -30,20 +30,21 @@ class Puppeteer extends Component {
       })
     }
     nsa.on('connect', () => this.setState({ mode: PUPPETEER }))
+    nsa.on('close', () => this.setState({ mode: CONNECT }))
   }
 
   render() {
     const { mode, id } = this.state
 
     if (mode === PUPPETEER) {
-      return <Controls />
+      return <Gyroscope />
     }
 
     if (mode === CONNECT) {
       return <div>{id}</div>
     }
 
-    return <div>Please provide the correct information</div>
+    return null
   }
 }
 
