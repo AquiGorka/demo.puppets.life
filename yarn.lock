@@ -5051,6 +5051,10 @@ qjobs@^1.1.4:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/qjobs/-/qjobs-1.1.5.tgz#659de9f2cf8dcc27a1481276f205377272382e73"
 
+qmark@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/qmark/-/qmark-0.0.1.tgz#3416d5a044943a369318b632b743a6c002cf2b74"
+
 qr-encode@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/qr-encode/-/qr-encode-0.3.0.tgz#0c783c297b62acb3c0221e5fba412336a1b4baca"
