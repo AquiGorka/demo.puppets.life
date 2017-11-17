@@ -10,7 +10,7 @@ class Connect extends Component {
 
   async componentDidMount() {
     const signal = await this.props.peer.initiator()
-    const url = document.location.origin + '/p'
+    const url = (PUPPETEER_URL ? PUPPETEER_URL : document.location.origin) + '/p'
     googleUrl.shorten(`${url}?signal=${btoa(JSON.stringify(signal))}`, (err, res) => {
       if (err) {
         console.log('Error: ', err)
