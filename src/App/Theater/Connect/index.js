@@ -27,7 +27,7 @@ class Connect extends Component {
 
     return <div>
       <div>Follow the QR Code or the link with your smartphone:</div>
-      <div>{qr(link, { type: 6, size: 6, level: 'Q'})}</div>
+      <div><img src={qr(link, { type: 6, size: 6, level: 'Q'})} /></div>
       <div>{link}</div>
     </div>
   }
