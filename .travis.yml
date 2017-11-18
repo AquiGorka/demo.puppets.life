@@ -11,8 +11,10 @@ script:
 deploy:
   provider: gcs
   access_key_id: GOOGOXTPJ2JM4WHPFQXO
+  secret_access_key:
+    secure: Cbxys1yCaEr47t//yJ4HayF4OcQjgxs2WvTyQuKuXKxqEQqLq45mLfNuyst0drmnmoV8t3KaSc9yKkQSEpKqJJ2kMaGecVVvldtD1gWMAJNBoSGuv46zsEXeBYTQOeX5JZO8qpremEbJyaX5jPkhKFJePERgbgUVItdEvVixnonOftTzM8HXvcmE3MxTTiMcdSYHrccMV9prkepT4WC1PzpmAjs90JSphxBHg4OzDyr1h5aXNpI+mipxyQEyxkRWi1f6yPIne39s8El5qFfbVjtUNTVK0Tb1PCrgAL2FfTQqgZB9GbDRph6aZGwbts06aX3sYOK71OAVi2bwsQ2I9k/fsqgG3QJ7f4J84lxAFjDxXUKoGCy9Oe/ybDO1BgiY8Nl295vvB9krmMm4yif+vGa+xqWcNtDvVuVWsjOs1Ne43XM5NVAwrp+uD9X4mhlBvuWVs2JmGcydzlm6xBzY3yajIvF/yRoENlVbGKqh3n8q19HbaQdZ+42oO0+GjZjgL7HkXoY48y8a+3lfI2+f5Ek+WlFyBv7QtWqy9Mcnen6uHbD/l5ouZzliwkLh3I23RIvY+U1dgnn4gFrr522jZyUJyIemRIj+dfoOJD1LDnygLHqMsptqUAJwv6Xp9Nx82enH2a5pFyyk1l/27AB59yvtEY66ProCgCU5SHdn96E=
   bucket: demo.puppets.life
-  local-dir: public
+  local-dir: dist
   overwrite: true
   acl: public-read
   skip_cleanup: true
