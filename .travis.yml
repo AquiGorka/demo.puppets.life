@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- node
+git:
+  depth: 10
+branches:
+  only:
+  - master
+script:
+- npm run build
+deploy:
+  provider: gcs
+  access_key_id: GOOGOXTPJ2JM4WHPFQXO
+  bucket: demo.puppets.life
+  local-dir: public
+  overwrite: true
+  acl: public-read
+  skip_cleanup: true
+  detect_encoding: true
+  on:
+    repo: AquiGorka/demo.puppets.life
+    branch: master
