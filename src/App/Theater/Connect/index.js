@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import qr from 'qr-encode'
 import GoogleURL from 'google-url'
 import nsa from '../../../nsa'
+import './Connect.css'
 
 const googleUrl = new GoogleURL({ key: GOOGLE_APIKEY })
 
@@ -24,15 +25,18 @@ class Connect extends Component {
   render() {
     const { link } = this.state
     if (!link) {
-      return <div>Loading</div>
+      return <div className="connect__loading"></div>
     }
 
-    return <div>
-      <div>Follow the QR Code or the link with your smartphone:</div>
-      <div><img src={qr(link, { type: 6, size: 6, level: 'Q'})} /></div>
-      <div>{link}</div>
+    return <div className="connect">
+      <h2>Follow the QR Code or the link with your smartphone and then connect using the provided Id:</h2>
+      <div className="connect__qr">
+        <img alt="Puppeteer" src={qr(link, { type: 6, size: 4, level: 'Q'})} />
+      </div>
+      <div className="connect__link">{link}</div>
       <form onSubmit={this.onSubmit} ref={f => (this.form = f)}>
-        <input type="text" />
+        <input className="connect__input-id" type="text" placeholder="Id here" />
+        <button className="connect__input-submit" type="submit">Connect</button>
       </form>
     </div>
   }
