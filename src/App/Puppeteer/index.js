@@ -3,6 +3,7 @@ import GoogleURL from 'google-url'
 import qmark from 'qmark'
 import Gyroscope from './Gyroscope'
 import nsa from '../../nsa'
+import './Puppeteer.css'
 
 const googleUrl = new GoogleURL({ key: GOOGLE_APIKEY })
 const PUPPETEER = 'p2p connected, start sending gyro data'
@@ -44,7 +45,7 @@ class Puppeteer extends Component {
       return <div>{id}</div>
     }
 
-    return <div>Loading</div>
+    return <div className="puppeteer"></div>
   }
 }
 

@@ -1,0 +1,6 @@
+.puppeteer{
+  width: 100%;
+  background: url('../spinner.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
