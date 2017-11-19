@@ -472,6 +472,7 @@ class Simulation extends Component {
 
   componentDidMount() {
     nsa.on('data', this.onData)
+    nsa.on('close', this.props.onDisconnect)
     init(this.canvas)
     oimoInterval = setInterval(oimoLoop, 10/60)
     animate()
@@ -479,7 +480,8 @@ class Simulation extends Component {
   }
 
   componentWillUnmount() {
-    nsa.off('data', this.onData)
+    nsa.removeListener('data', this.onData)
+    nsa.removeListener('close', this.props.onDisconnect)
     clearInterval(oimoInterval)
     if (myReq) {
       window.cancelAnimationFrame(myReq)
