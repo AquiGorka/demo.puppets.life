@@ -44,7 +44,7 @@ class Puppeteer extends Component {
       return <div>{id}</div>
     }
 
-    return null
+    return <div>Loading</div>
   }
 }
 

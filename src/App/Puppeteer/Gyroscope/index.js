@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import throttle from 'method-throttle'
 import nsa from '../../../nsa'
+import compass from './compass.svg'
+import './Gyroscope.css'
 
 class Gyroscope extends Component {
 
@@ -17,7 +19,9 @@ class Gyroscope extends Component {
   }, 50)
 
   render() {
-    return <div></div>
+    return <div className="gyroscope">
+      <img className="gyroscope__img" src={compass} alt="Compass" />  
+    </div>
   }
 }
 
