@@ -42,7 +42,10 @@ class Puppeteer extends Component {
     }
 
     if (mode === CONNECT) {
-      return <div>{id}</div>
+      return <div className="puppeteer__wrap">
+        <h2>Use this Id to connect:</h2>
+        <div className="puppeteer__id">{id}</div>
+      </div>
     }
 
     return <div className="puppeteer"></div>

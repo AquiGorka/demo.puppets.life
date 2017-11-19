@@ -4,3 +4,17 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+.puppeteer__wrap{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.puppeteer__id{
+  border: 1px solid #CCC;
+  padding: 10px 30px;
+  letter-spacing: 10px;
+}
