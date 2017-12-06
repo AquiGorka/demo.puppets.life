@@ -1,5 +1,7 @@
 # Demo @ Puppets
 
+![Puppets screenshot](/static/demo-puppets.png)
+
 Showcase a 3D virtual Puppet that is remote controlled via a smartphone. By moving the smartphone around the control bar above the puppet mimmics the smartphone's orientatntion and the marionette will respond accordingly.
 
 ## Dev
